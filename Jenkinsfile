@@ -8,5 +8,12 @@ pipeline{
         }
       }
     }
+    stage('test'){
+      steps{
+        script{
+          echo "test in progress"
+        }
+      }
+    }
   }
 }
