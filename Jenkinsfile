@@ -12,7 +12,7 @@ pipline {
                 }
             }
         }
-        stage ('etst'){
+        stage ('test'){
               steps{
                  script{
                     echo "teasting"
