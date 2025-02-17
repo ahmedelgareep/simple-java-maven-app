@@ -1,30 +1,23 @@
-node{
-    git branch: 'main', url: 'https://github.com/ahmedelgareep/simple-java-maven-app.git'
+pipline {
 
-    stage('Build'){
+    agint any
 
-        try{
-            sh'echo "build in progress"'
+    stages{
+        stage ('build'){
+            steps{
+                script{
 
+                    echo "builed in progress"
+
+                }
+            }
         }
-        catch(Exception e){
-            echo " exceptionin found"
-            throw e
-        }
-            
-    }
-
-      stage('Test') {
-
-        if (env.BRANCH_NAME == 'mastfeater') {
-            echo 'test stage'
-        } else {
-            echo 'skip Test stage'
+        stage ('etst'){
+              steps{
+                 script{
+                    echo "teasting"
+                }
+            }
         }
     }
-
-    stage('Deploy') { 
-         
-    }
-
 }
