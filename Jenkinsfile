@@ -1,6 +1,6 @@
 pipline {
 
-    agint any
+    agent any
 
     stages{
         stage ('build'){
