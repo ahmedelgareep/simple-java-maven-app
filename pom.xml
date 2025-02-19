@@ -25,11 +25,17 @@
         <configuration>
           <compilerArgs>
 		<args>-parameters</args>
+		      <profile>
+      <id>set-compiler-release</id>
+      <activation>
+        <jdk>[9,)</jdk>
+      </activation>
+      <properties>
+        <maven.compiler.release>8</maven.compiler.release>
+      </properties>
+    </profile>
 	 </compilerArgs>
-			  <properties>
-    <java.version>1.8</java.version>
-    <maven.compiler.release>8</maven.compiler.release>
-  </properties>
+		
 
           <archive>
             <manifest>
